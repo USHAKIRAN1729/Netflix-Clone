@@ -10,6 +10,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* Optional: Styles to fix the font color in the language dropdown options */
+.language__drop__down option {
+  background-color: black;
+  color: white; /* Ensure text is visible against the black background when clicked */
+}
+
 .navbar {
   position: absolute;
   top: 0;
@@ -40,9 +46,7 @@ body {
   outline: none;
 }
 
-.language__drop__down option {
-  background-color: black;
-}
+/* Removed redundant language__drop__down option style */
 
 .dropdown__container {
   border: 1px solid white;
@@ -96,6 +100,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  /* CRITICAL IMPROVEMENT: Center the card horizontally on mobile */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 450px; /* Optional: adds a max width for better appearance */
 }
 
 .hero__title {
